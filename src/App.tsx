@@ -1,11 +1,21 @@
 import './App.css';
 import { Button } from './ui/button/button';
+import { Title } from './ui/button/title/title';
+import { Bar } from './ui/button/bar/bar';
 
 function App() {
-  const onClick = () => {
+  const onButtonClick = () => {
     console.log(1);
-  }
-  return <Button  onClick={onClick}>OK</Button>;
+  };
+  return (
+    <>
+    <div>
+        <Button onClick={onButtonClick}>OK</Button>
+    </div>
+      <Title>Sign In</Title>
+      <Bar></Bar>
+    </>
+  );
 }
 
 export default App;
