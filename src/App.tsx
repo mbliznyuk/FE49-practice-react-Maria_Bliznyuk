@@ -1,7 +1,16 @@
 import './App.css';
 import { Button } from './ui/button/button';
-import { Title } from './ui/button/title/title';
-import { Bar } from './ui/button/bar/bar';
+import { Title } from './ui/title/title';
+import { Bar } from './features/header/header';
+import { Tabs } from './ui/tabs/tab';
+import { TabModel } from './ui/tabs/tab';
+
+const tabsModels: TabModel[] = [
+  { id: 1, name: 'All'},
+  { id: 2, name: 'My favorites' },
+  { id: 3, name: 'Popular', isDisabled: true  },
+];
+
 
 function App() {
   const onButtonClick = () => {
@@ -14,6 +23,8 @@ function App() {
     </div>
       <Title>Sign In</Title>
       <Bar></Bar>
+      <Tabs defaultSelectedTabId={3} tabs={tabsModels}></Tabs>
+
     </>
   );
 }
