@@ -3,14 +3,9 @@ import { Button } from './ui/button/button';
 import { Title } from './ui/title/title';
 import { Bar } from './features/header/header';
 import { Tabs } from './ui/tabs/tab';
-import { TabModel } from './ui/tabs/tab';
-
-const tabsModels: TabModel[] = [
-  { id: 1, name: 'All'},
-  { id: 2, name: 'My favorites' },
-  { id: 3, name: 'Popular', isDisabled: true  },
-];
-
+import { BigPostCard } from './ui/post_card/big_post_card/big_post_card';
+import { postCardModels, tabsModels } from './mocked-data';
+import { MiddlePostCard } from './ui/post_card/middle_post_card/middle_post_card';
 
 function App() {
   const onButtonClick = () => {
@@ -24,6 +19,8 @@ function App() {
       <Title>Sign In</Title>
       <Bar></Bar>
       <Tabs defaultSelectedTabId={3} tabs={tabsModels}></Tabs>
+      <BigPostCard postCard={postCardModels[0]} ></BigPostCard>
+      <MiddlePostCard postCard={postCardModels[1]}></MiddlePostCard>
 
     </>
   );

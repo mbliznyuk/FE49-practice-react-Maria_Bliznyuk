@@ -15,6 +15,7 @@ export const Burger = styled.div`
   align-items: center;
   justify-content: center;
   border-right: 1px solid #5463ca;
+  cursor: pointer;
 `;
 
 export const SearchIconWrapper = styled.div`

@@ -23,7 +23,7 @@ export const Bar: React.FC<BarProps> = (props: BarProps) => {
         </Burger>
         { isOpen
           ? <SearchInputAlternative></SearchInputAlternative>
-          : <><SearchInput placeholder="Search..."></SearchInput><CloseInputIcon><FontAwesomeIcon icon={faXmark} /></CloseInputIcon></>
+          : <><SearchInput placeholder="Search..."></SearchInput><CloseInputIcon><FontAwesomeIcon icon={faXmark} />s</CloseInputIcon></>
         }
         <SearchIconWrapper>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
