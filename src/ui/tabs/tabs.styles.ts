@@ -5,6 +5,7 @@ export const TabsWrapper = styled.div`
   width: 100%;
   height: 100px;
   border-bottom: 1px solid #EAEAEA;
+  margin-bottom: 30px;
 `;
 
 export const Tab = styled.button<{isSelected: boolean}>`

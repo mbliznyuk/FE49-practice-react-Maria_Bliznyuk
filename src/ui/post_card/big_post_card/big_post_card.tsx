@@ -12,7 +12,11 @@ import {
   PostCardText,
   PostCardTitle,
   SaveIcoonWrapper,
+  postCardIconStyle,
 } from './big_post_card.styles';
+import { icon } from '@fortawesome/fontawesome-svg-core/import.macro';
+import 'font-awesome/css/font-awesome.min.css';
+
 
 type BigPostCardProps = {
   postCard: PostCardModel;
@@ -33,12 +37,12 @@ export const BigPostCard: React.FC<BigPostCardProps> = (
       </MainWrapper>
       <IconWrapper>
         <LikeWrapper>
-        <FontAwesomeIcon icon={faThumbsUp} />
-        <FontAwesomeIcon icon={faThumbsDown} />
+          <FontAwesomeIcon icon={faThumbsUp} />
+          <FontAwesomeIcon icon={faThumbsDown} />
         </LikeWrapper>
         <SaveIcoonWrapper>
-        <FontAwesomeIcon icon={faBookmark} />
-        <FontAwesomeIcon icon={faEllipsisH} />
+        <FontAwesomeIcon icon={icon({name: 'bookmark'})} />
+          <FontAwesomeIcon icon={faEllipsisH} />
         </SaveIcoonWrapper>
       </IconWrapper>
     </BigPostCardWrapper>

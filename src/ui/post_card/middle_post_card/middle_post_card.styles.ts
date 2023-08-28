@@ -1,32 +1,33 @@
 import { styled } from 'styled-components';
 
 export const MiddlePostCardWrapper = styled.div`
-  width: 350px;
+  width: 300px;
+  height: 310px;
   background-color: #f3f3f3;
-  padding: 25px 20px;
-  border-bottom: 1px solid #8B8A90;
+  padding: 15px 10px 16px 10px;
+  border-bottom: 1px solid #8b8a90;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
 `;
 export const MainWrapper = styled.div`
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
 `;
 
 export const PostCardDate = styled.div`
-color: #8B8A90;
-font-size: 14px;
+  color: #8b8a90;
+  font-size: 14px;
 `;
 
-export const PostCardTitle = styled.h3`
-color: #403F44;
-line-height: 26px;
-
+export const PostCardTitle = styled.h2`
+  color: #403f44;
+  font-size: 18px;
+  margin: 10px 0;
 `;
 
 export const CardImageWrapper = styled.div`
-  width: 90%;
-  height: 180px;
+  width: 100%;
+  height: 160px;
   margin: auto;
   margin-bottom: 15px;
   & img {
@@ -37,18 +38,18 @@ export const CardImageWrapper = styled.div`
   }
 `;
 export const IconWrapper = styled.div`
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 `;
 export const LikeWrapper = styled.div`
-width: 20%;
-display: flex;
-justify-content: space-between;
-font-size: 20px;
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
 `;
 export const SaveIcoonWrapper = styled.div`
-width: 20%;
-display: flex;
-justify-content: space-between;
-font-size: 20px;
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
 `;
