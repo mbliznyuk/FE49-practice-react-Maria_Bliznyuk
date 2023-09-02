@@ -4,6 +4,7 @@ export interface PostCardModel {
   text: string;
   date: string;
   lesson_num: number;
+  likes_amount: number;
   title: string;
   author: number;
 }

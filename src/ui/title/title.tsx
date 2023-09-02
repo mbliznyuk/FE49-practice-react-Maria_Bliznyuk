@@ -1,5 +1,5 @@
-import { TitleWrapper } from './title.styles';
 import { CSSProperties } from 'react';
+import { styled } from 'styled-components';
 
 type TitleProps = {
   children: string;
@@ -13,3 +13,11 @@ export const Title: React.FC<TitleProps> = (props: TitleProps) => {
     </TitleWrapper>
   );
 };
+
+const TitleWrapper = styled.h1`
+  all: unset;
+  color: black;
+  font-size: 50px;
+  font-weight: 800;
+  background-color: lightgray;
+`;
