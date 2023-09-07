@@ -39,7 +39,7 @@ export const MiddlePostCard: React.FC<MiddlePostCardProps> = (
       </MainWrapper>
       <IconWrapper>
         <LikeWrapper>
-          <LikeIcon onClick={like}>
+          <LikeIcon onClick={() => like()}>
             {isLiked ? (
               <i className="fa-solid fa-thumbs-up"></i>
             ) : (
@@ -47,7 +47,7 @@ export const MiddlePostCard: React.FC<MiddlePostCardProps> = (
             )}
           </LikeIcon>
           <AmountOfLikes>{amountOfLikes}</AmountOfLikes>
-          <DislikeIcon onClick={dislike}>
+          <DislikeIcon onClick={() => dislike()}>
             {isDisliked ? (
               <i className="fa-solid fa-thumbs-down"></i>
             ) : (

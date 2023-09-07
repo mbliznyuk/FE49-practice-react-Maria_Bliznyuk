@@ -32,14 +32,16 @@ export const SmallPostCard: React.FC<SmallPostCardProps> = (
     <SmallPostCardWrapper>
       <SmallMainWrapper>
         <SmallCardtextWrapper>
-            <SmallPostCardDate>{props.postCard.date}</SmallPostCardDate>
-            <SmallPostCardTitle>{props.postCard.title}</SmallPostCardTitle>
+          <SmallPostCardDate>{props.postCard.date}</SmallPostCardDate>
+          <SmallPostCardTitle>{props.postCard.title}</SmallPostCardTitle>
         </SmallCardtextWrapper>
-        <SmallCardImageWrapper><img src={props.postCard.image} alt='#'></img></SmallCardImageWrapper>
+        <SmallCardImageWrapper>
+          <img src={props.postCard.image} alt="#"></img>
+        </SmallCardImageWrapper>
       </SmallMainWrapper>
       <SmallIconWrapper>
         <SmallLikeWrapper>
-          <LikeIcon onClick={like}>
+          <LikeIcon onClick={() => like()}>
             {isLiked ? (
               <i className="fa-solid fa-thumbs-up"></i>
             ) : (
@@ -47,7 +49,7 @@ export const SmallPostCard: React.FC<SmallPostCardProps> = (
             )}
           </LikeIcon>
           <AmountOfLikes>{amountOfLikes}</AmountOfLikes>
-          <DislikeIcon onClick={dislike}>
+          <DislikeIcon onClick={() => dislike()}>
             {isDisliked ? (
               <i className="fa-solid fa-thumbs-down"></i>
             ) : (
@@ -70,7 +72,7 @@ export const SmallPostCard: React.FC<SmallPostCardProps> = (
   );
 };
 
- const SmallPostCardWrapper = styled.div`
+const SmallPostCardWrapper = styled.div`
   width: 350px;
   background-color: #f3f3f3;
   padding: 10px 20px;
@@ -80,7 +82,7 @@ export const SmallPostCard: React.FC<SmallPostCardProps> = (
 const SmallMainWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 `;
 const SmallCardtextWrapper = styled.div`
   width: 75%;

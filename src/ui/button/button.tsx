@@ -10,7 +10,7 @@ type ButtonProps = {
 
 export const Button: React.FC<ButtonProps> = (props: ButtonProps) => {
   return (
-    <ButtonWrapper type="button" disabled={props.disabled} onClick={props.onClick}>
+    <ButtonWrapper type="button" disabled={props.disabled} onClick={() => props.onClick()}>
       {props.children}
     </ButtonWrapper>
   );

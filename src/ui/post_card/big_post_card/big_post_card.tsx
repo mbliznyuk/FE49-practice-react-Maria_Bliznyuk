@@ -41,9 +41,9 @@ export const BigPostCard: React.FC<BigPostCardProps> = (
       </MainWrapper>
       <IconWrapper>
         <LikeWrapper>
-          <LikeIcon onClick={like}> {isLiked ? <i className="fa-solid fa-thumbs-up"></i> :<i className="fa-regular fa-thumbs-up"></i>}</LikeIcon>
+          <LikeIcon onClick={() => like()}> {isLiked ? <i className="fa-solid fa-thumbs-up"></i> :<i className="fa-regular fa-thumbs-up"></i>}</LikeIcon>
           <AmountOfLikes>{amountOfLikes}</AmountOfLikes>
-          <DislikeIcon onClick={dislike}> {isDisliked ? <i className="fa-solid fa-thumbs-down"></i> : <i className="fa-regular fa-thumbs-down"></i>}</DislikeIcon>
+          <DislikeIcon onClick={() => dislike()}> {isDisliked ? <i className="fa-solid fa-thumbs-down"></i> : <i className="fa-regular fa-thumbs-down"></i>}</DislikeIcon>
         </LikeWrapper>
         <SaveIcoonWrapper>
           <BookmarkIcon onClick={() =>setIsSaved(!isSaved)}> {isSaved ? <i className="fa-solid fa-bookmark"></i> : <i className="fa-regular fa-bookmark"></i>}</BookmarkIcon>
